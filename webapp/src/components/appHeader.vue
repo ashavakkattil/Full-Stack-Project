@@ -28,7 +28,7 @@
     </v-parallax>
     <v-row class="justify-center">
       <v-app-bar class="ma-auto" dense outlined color="transparent">
-        <v-container>
+       
           <v-row class="justify-center text-center mx-auto">
             <v-col sm="1" class="px-0 homepageLink">
               <router-link to="/"><span >Home</span></router-link>
@@ -40,7 +40,7 @@
               <router-link to="/about"><span >About</span></router-link>
             </v-col>
           </v-row>
-        </v-container>
+       
       </v-app-bar>
     </v-row>
   </div>
