@@ -50,13 +50,22 @@
         <v-col cols="12">2pics</v-col>
       </v-row>
     </template>
+    <v-row v-if="$vuetify.breakpoint.mdAndUp">
+      <v-col cols="8">Blog post component</v-col>
+      <v-col cols="4"><sideBar/></v-col>
+    </v-row>
+    <v-row v-else>
+      <v-col cols="12">Blog post component</v-col>
+      <v-col cols="12"><sideBar/></v-col>
+    </v-row>
   </v-container>
 </template>
 
 <script>
+import sideBar from "../components/sideBar";
 export default {
   name: "home",
-  components: {},
+  components: { sideBar },
   data() {
     return {
       items: [
