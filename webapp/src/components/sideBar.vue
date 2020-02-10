@@ -9,17 +9,17 @@
     <v-row class="searchBoxRow">
       <v-col class="pa-0">
         <p class="subtitle font-weight-bold">Recent Posts</p>
-        <div v-for="blog in blogs" :key="blog" class="recentPost">
+        <div v-for="(blog,index) in blogs" :key="index" class="recentPost">
           <ul>
             <li>{{blog.name}}</li>
           </ul>
         </div>
       </v-col>
     </v-row>
-     <v-row class="searchBoxRow">
+    <v-row class="searchBoxRow">
       <v-col class="pa-0">
         <p class="subtitle font-weight-bold">Categories</p>
-        <div v-for="blog in blogs" :key="blog" class="recentPost">
+        <div v-for="(blog,index) in blogs" :key="index" class="recentPost">
           <ul>
             <li>{{blog.category}}(count of posts)</li>
           </ul>
@@ -30,8 +30,8 @@
 </template>
 
 <style scoped>
-.searchBoxRow{
-    margin-top: 30px;
+.searchBoxRow {
+  margin-top: 30px;
 }
 .searchBoxRow .col {
   text-align: center;
@@ -57,32 +57,44 @@ export default {
         {
           name: "Rose, Coffee & Life",
           desc: "Rose, Coffee & Life blog post 1",
-          category: "Personal"
+          category: "Personal",
+          src:
+            "https://www.designlabthemes.com/preview/type/files/2017/07/cake-1839134_1920-800x500.jpg"
         },
         {
           name: "LifeStyle Blog & Shop",
           desc: "LifeStyle Blog & Shop blog post 2",
-          category: "Personal"
+          category: "Personal",
+          src:
+            "https://www.designlabthemes.com/preview/type/files/2017/07/cake-1839134_1920-800x500.jpg"
         },
         {
           name: "Diy Holiday",
           desc: "Diy Holiday blog post 3",
-          category: "Health"
+          category: "Health",
+          src:
+            "https://www.designlabthemes.com/preview/type/files/2017/07/mobile-791164-800x500.jpg"
         },
         {
           name: "Behind the Lens",
           desc: "Behind the Lens blog post 4",
-          category: "Food"
+          category: "Food",
+          src:
+            "https://www.designlabthemes.com/preview/type/files/2017/07/cake-1839134_1920-800x500.jpg"
         },
         {
           name: "Why flower Succeeds",
           desc: "Why flower Succeeds blog post 5",
-          category: "Work"
+          category: "Work",
+          src:
+            "https://www.designlabthemes.com/preview/type/files/2017/07/mobile-791164-800x500.jpg"
         },
         {
           name: "Some random thoughts",
           desc: "Some random thoughts post 6",
-          category: "Personal"
+          category: "Personal",
+          src:
+            "https://www.designlabthemes.com/preview/type/files/2017/07/cake-1839134_1920-800x500.jpg"
         }
       ]
     };
